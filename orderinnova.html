@@ -1,0 +1,235 @@
+<html>
+<head>
+	<title>UTS Pemrograman WEB</title>
+	<style type="text/css">
+		@font-face {
+			font-family: 'CherrySwash';
+			src: url('font/CherrySwash-Regular.otf');
+		}
+		
+		.header{
+			font-family: 'CherrySwash';
+			text-align: center;
+			margin-top:30px;
+		}
+		
+		div.inner {
+			border-radius: 12px;
+			border: 3px solid gray;
+			padding-bottom:10px;
+			padding-right:10px;
+			padding-left:10px;
+		}
+
+		div.outer {
+			display: inline-block;
+			border-radius: 12px;
+			border: 3px dashed gray;
+			box-shadow:0px 0px 5px grey;	
+		}
+		
+		.itemcontent {
+			width: 44%;
+			float: left;
+			line-height:1.6;
+			margin-top:30px;
+		}
+		
+		.content{
+			font-family: 'CherrySwash';
+			text-align: center;
+			margin-left:200px;
+			margin-right:190px;
+		}
+		
+		input{
+			border-radius:5px;
+			padding: 5px;
+		}
+		
+		textarea{
+			border-radius:5px;
+			padding: 5px;
+		}
+		
+		select{
+			border-radius:5px;
+			padding: 5px;
+		}
+		
+		.carinfo{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		
+		.box{
+			flex-basis: 100%;
+		}
+		
+		.buttonprosess{
+			position: relative;
+			float: left;
+			top: 50%;
+			background:gray;
+			padding-top:10px;
+			padding-bottom:10px;
+			padding-left:40px;
+			padding-right:40px;
+			margin-left:-5px;
+			color:white;
+			box-shadow:0px 0px 5px grey;
+			border-top-right-radius:9px;
+			border-bottom-right-radius:9px;
+			cursor:pointer;
+		}
+		
+		.imageorder{
+			margin-left:50px;
+			margin-right:50px;
+		}
+		
+		table {
+			width: 100%;
+		}
+		
+		
+	</style>
+</head>
+
+<body>
+	<div class="header">
+		<h1>Rental Mobil Online</h1>
+	</div>
+	
+	<div class="content">
+		<section class="itemcontent" style="margin-right:50px;">
+		<div class="outer">
+			<div class="inner">
+				<h2>IDENTITAS PENYEWA</h2>
+				<table>
+					<tr>
+						<td valign="top" style="width:36.5%;">No KTP</td>
+						<td valign="top"> : </td>
+						<td><input type="text" name="noktp" value="" style="width:100%; margin-bottom:7px;" placeholder="No KTP Pemohon"></td>
+					</tr>
+					
+					<tr>
+						<td valign="top" style="width:36.5%;">Nama</td>
+						<td valign="top"> : </td>
+						<td><input type="text" name="nama" value="" style="width:100%; margin-bottom:7px;" placeholder="Nama Pemohon"></td>
+					</tr>
+					
+					<tr>
+						<td valign="top" style="width:36.5%;">Alamat</td>
+						<td valign="top"> : </td>
+						<td><textarea rows="10" cols="50" style="width:100%; margin-bottom:7px;" placeholder="Cantumkan Alamat Lengkap"></textarea></td>
+					</tr>
+					
+					<tr>
+						<td valign="top"style="width:36.5%;">No Telp/HP</td>
+						<td valign="top"> : </td>
+						<td><input type="text" name="nohp" value="" style="width:100%; margin-bottom:7px;" placeholder="No Telp"></td>
+					</tr>
+					
+					<tr>
+						<td valign="top" style="width:36.5%;">E-Mail</td>
+						<td valign="top"> : </td>
+						<td><input type="text" name="email" value="" style="width:100%; margin-bottom:7px;" placeholder="Alamat Email"></td>
+					</tr>
+					
+					<tr>
+						<td valign="top" style="width:36.5%;">Jenis Pembayaran</td>
+						<td valign="top"> : </td>
+						<td>
+							<input type="radio" name="paymenttype" value="Transfer"> Transfer
+							<input type="radio" name="paymenttype" value="Tunai"> Tunai
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		</section>
+		
+		<section class="itemcontent">
+		<section class="carinfo">
+			<aside class="box one">
+				<div class="outer">
+					<div class="inner">
+						<h2>Toyota Kijang Innova</h2>
+						<div class="imageorder"><img src="gambar/MobilInnova.png" style="width:220px;"></div>
+						<h3>Rp 600,000.00 / Hari</h3>
+						<table>
+							<tr>
+								<td>Plat No</td>
+								<td> : </td>
+								<td>
+									<input type="text" name="platno" value="D 4867 UTS" disabled style="width:100%; margin-bottom:7px;">
+								</td>
+							</tr>
+							
+							<tr>
+								<td valign="top">Supir</td>
+								<td valign="top"> : </td>
+								<td>
+									<input type="radio" name="supir" value="Ya"> Ya
+									<input type="radio" name="supir" value="Tidak"> Tidak
+								</td>
+							</tr>
+							
+							<tr>
+								<td>Lama Sewa</td>
+								<td> : </td>
+								<td>
+									<select name="lamasewa" style="width:100%;">
+										<option value="1">1 Hari</option>
+										<option value="2">2 Hari</option>
+										<option value="3">3 Hari</option>
+										<option value="4">4 Hari</option>
+										<option value="5">5 Hari</option>
+										<option value="6">6 Hari</option>
+										<option value="7">7 Hari</option>
+										<option value="8">8 Hari</option>
+										<option value="9">9 Hari</option>
+										<option value="10">10 Hari</option>
+										<option value="11">11 Hari</option>
+										<option value="12">12 Hari</option>
+										<option value="13">13 Hari</option>
+										<option value="14">14 Hari</option>
+										<option value="15">15 Hari</option>
+										<option value="16">16 Hari</option>
+										<option value="17">17 Hari</option>
+										<option value="18">18 Hari</option>
+										<option value="19">19 Hari</option>
+										<option value="20">20 Hari</option>
+										<option value="21">21 Hari</option>
+										<option value="22">22 Hari</option>
+										<option value="23">23 Hari</option>
+										<option value="24">24 Hari</option>
+										<option value="25">25 Hari</option>
+										<option value="26">26 Hari</option>
+										<option value="27">27 Hari</option>
+										<option value="28">28 Hari</option>
+										<option value="29">29 Hari</option>
+										<option value="30">30 Hari</option>
+										<option value="31">31 Hari</option>
+									</select>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</aside>
+			
+			<aside class="box two"> 
+				<div class="buttonprosess">
+					Proses
+				</div>
+			</aside>
+		
+			
+		</section>
+		</section>
+	</div>
+</body>
+</html>
